@@ -55,7 +55,7 @@ h3 {
 h1 {
     margin-top: 0; /* Margen superior */    
     margin-bottom: 20px; /* Margen inferior */
-    color: #fff;
+    color: #f3efe0;
     font-size: 240%; /* Respecto al definido en *, html o body */    
     word-spacing: 4px; /* Espaciado entre palabras */
     letter-spacing: 1px; /* Espaciado entre letras */
@@ -153,7 +153,6 @@ input[type=submit]:active {
     display: inline-block;
     width: 30px;
     text-align: center;
-    /* color: #22A39F; */
     font-size: 120%;
     line-height: 120%;
     vertical-align: baseline;
@@ -165,12 +164,13 @@ input[type=submit]:active {
 /* CABECERA */
 /* ------------------------------------------------------------------------------------------ */
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/fondo.jpg); /* Inagen de fondo transparente ub 30%. Color de inicio y de fin del gradiente: negro (0,0,0) */
+.transparencia
+{
+    background-image:  url(img/fondo.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Establecer alto de la imagen como el 100% del alto del área visible (vh o Viewport Height) */
+    height: 100vh;
 }
 
 .cabecera {
@@ -179,7 +179,8 @@ header {
     width: 1140; /* Mismo ancho que el estilo .row de la fila del grid */
     top: 50%; /* Alineación vertical centrada */
     left: 50%; /* Alineación horizontal comenzando en la mitad de la pantalla */
-    transform: translate(-50%, -50%) /* Desplazamiento horizontal del texto para centrarlo en pantalla */    
+    -ms-transform: translate(-50%, -50%); /* IE9: Desplazamiento horizontal del texto para centrarlo en pantalla */    
+    transform: translate(-50%, -50%); /* IE9: Desplazamiento horizontal del texto para centrarlo en pantalla */    
 }
 
 .logo {
@@ -254,8 +255,8 @@ header {
 }
 
 .logo-centrado {
-    width: 200;
-    height: 200;
+    width: 200px;
+    height: 200px;
     vertical-align: middle;
     margin: 0 auto;
     display: block;

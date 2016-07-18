@@ -1,3 +1,11 @@
+if (!Modernizr.formvalidation)
+{
+      //console.log('No soportada validación de formularios HTML5');
+      window.onload = function() {
+        H5F.setup(document.getElementById("formulario-contacto"));
+      }
+}
+
 // Obtener referencias al formulario
 var form = document.getElementById("formulario-contacto");
 
@@ -53,14 +61,14 @@ form.addEventListener("submit", function(evt){
     }
 
     // Si el campo dime_como_me_has_conocido existe, validamos que esté informado
-    var dime_como_me_has_conocido = document.getElementById("dime_como_me_has_conocido");
-    if (dime_como_me_has_conocido) {
+    var dime_como_me_has_conocido = document.getElementById("dime_como_me_has_conocido");    
+    if (dime_como_me_has_conocido != null) {
         if (dime_como_me_has_conocido.checkValidity() == false) {
             alert("Por favor indica cómo me has conocido");
             dime_como_me_has_conocido.focus();
             evt.preventDefault();
             return false;
-        }    
+        }
     }
     
     // Validar número de teléfono (9 dígitos)

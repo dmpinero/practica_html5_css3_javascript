@@ -10,43 +10,44 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/type.css">
-		<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-        
-		<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
-		<link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    		<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+            
+    		<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
+    		<link rel="stylesheet" type="text/css" href="resources/css/queries.css">
 			
         <!-- Fuentes de gogle fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,300italic' rel='stylesheet' type='text/css'>
+
+        <!-- Scripts -->
+        <script src="vendors/js/modernizr-custom.js"></script>
+        <script src="vendors/js/H5F.js"></script>
     </head>
 
-    <body>
-        <!-- Sección Portada -->
-        <section id="portada">
-          <header>
-            <nav>
-                <div class="row">                
-                    <ul class="main-nav">
-                        <li><a href="#portada">Portada /</a></li>
-                        <li><a href="#quien-soy">1. Quién soy /</a></li>
-                        <li><a href="#estudios-y-certificaciones">2. Estudios /</a></li>
-                        <li><a href="#experiencia-profesional">3. Experiencia /</a></li>
-                        <li><a href="#conocimientos">4. Conocimientos /</a></li>
-                        <li><a href="#sobre-mi">5. Sobre mí /</a></li>
-                        <li><a href="#contacto">6. Contacto</a></li>
-                    </ul>
-                </div>
-            </nav>
-          </header>
+    <body>       
+        <header  id="portada" class="transparencia">
+          <nav>
+              <div class="row">                
+                  <ul class="main-nav">
+                      <li><a href="#portada">Portada /</a></li>
+                      <li><a href="#quien-soy">1. Quién soy /</a></li>
+                      <li><a href="#estudios-y-certificaciones">2. Estudios /</a></li>
+                      <li><a href="#experiencia-profesional">3. Experiencia /</a></li>
+                      <li><a href="#conocimientos">4. Conocimientos /</a></li>
+                      <li><a href="#sobre-mi">5. Sobre mí /</a></li>
+                      <li><a href="#contacto">6. Contacto</a></li>
+                  </ul>
+              </div>
+          </nav>
+        </header>
 
-          <div class="cabecera">          
-              <h1>Daniel Martínez Piñero<br>Full Stack Developer</h1>
-              <h1 class="tagline">
-                <div class="element">
-                    <span class="typed-cursor"></span>
-                </div>
-              </h1>			
-          </div>        
-        </section>
+        <div class="cabecera">          
+            <h1>Daniel Martínez Piñero<br>Full Stack Developer</h1>
+            <h1 class="tagline">
+              <div class="element">
+                  <span class="typed-cursor"></span>
+              </div>
+            </h1>			
+        </div>        
 
         <!-- Quién soy -->
         <section class="quien-soy js--section-quien-soy" id="quien-soy">
@@ -84,7 +85,7 @@
            <div class="row">
                 <h2>Estudios y Certificaciones</h2>
             </div>
-            
+
             <!-- Master Keepcoding -->
             <div class="row">
                 <div class="col span-1-of-3"> <h3>2016&mdash;2017</h3>    
@@ -92,6 +93,17 @@
                 <div class="col span-2-of-3">
                     <h3 class="titulo-estudio">Keepcoding</h3>
                     <p>Web Development Master Bootcamp</p>
+                </div>                
+            </div>            
+           <!-- Certificaciones y cursos -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <h3>2013&mdash;2019</h3>                    
+                </div>
+                <div class="col span-2-of-3">
+                    <h3 class="titulo-estudio">Project Management Institute</h3>
+                    <p>Certificación PMP &copy;</p>
+                    <p>Número de licencia 1598689</p>
                 </div>                
             </div>            
             <!-- Estudio 1 -->
@@ -110,17 +122,6 @@
                 <div class="col span-2-of-3">
                     <h3 class="titulo-estudio">Universidad de Huelva</h3>
                     <p>Diplomatura en Informática Gestión</p>
-                </div>                
-            </div>
-            <!-- Certificaciones y cursos -->
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <h3>2013&mdash;2019</h3>                    
-                </div>
-                <div class="col span-2-of-3">
-                    <h3 class="titulo-estudio">Project Management Institute</h3>
-                    <p>Certificación PMP &copy;</p>
-                    <p>Número de licencia 1598689</p>
                 </div>                
             </div>
         </section>
@@ -400,20 +401,14 @@
                 <div class="row">
                    <!-- Cabecera de la sección -->
                    <h2>Contacto</h2>
-                   <!-- Mensaje de error -->
-                   <!--
-                    <div class="row">
-                        <div class="error" id="capa_error"></div>
-                   </div>
-                   -->
-                   <!-- Campo nombre. Requerido-->
-                   <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="nombre">Nombre</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
-                        </div>
+                </div>
+               <!-- Campo nombre. Requerido-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
                     </div>
                 </div>
                 <!-- Campo email -->
@@ -473,7 +468,7 @@
                         <label>&nbsp;</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="submit">
+                        <input type="submit" value="Enviar">
                     </div>
                 </div>
             </form>                        
@@ -504,7 +499,6 @@
     <script src="resources/js/smooth_navigation.js"></script>
     <script src="resources/js/validacion_formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>
 </html>
