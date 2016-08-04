@@ -40,12 +40,27 @@ else {
 }
 });
 
+// Función que añade la capa si no existe
+function añadecapa(capa, capa_añadida) {
+    if (! document.getElementById(capa).classList.contains(capa_añadida))
+        document.getElementById(capa).classList.add(capa_añadida);
+}
+
+// Función que borra la capa si existe
+function borracapa(capa, capa_borrar) {
+    if (document.getElementById(capa).classList.contains(capa_borrar))
+        document.getElementById(capa).classList.remove(capa_borrar);
+}
+
 // Validación del formulario al hacer submit
 form.addEventListener("submit", function(evt){
     // Validar nombre (requerido)
     var nombre = document.getElementById('nombre');
     if (nombre.checkValidity() == false) {
-        alert("Escribe tu nombre");
+        document.getElementById('capa_error').style.display='block';      
+        document.getElementById('texto_capa_error').innerText = "Escribe tu nombre";           
+        añadecapa('capa_error', 'error');
+        borracapa('capa_error', 'success');
         nombre.focus();
         evt.preventDefault();
         return false;
@@ -54,7 +69,9 @@ form.addEventListener("submit", function(evt){
     // Validar email (Formato)
     var email = document.getElementById('email');
     if (email.checkValidity() == false) {
-        alert("Email no válido");
+        document.getElementById('texto_capa_error').innerText = "Email no válido";
+        añadecapa('capa_error', 'error');
+        borracapa('capa_error', 'success');        
         email.focus();
         evt.preventDefault();
         return false;
@@ -64,7 +81,9 @@ form.addEventListener("submit", function(evt){
     var dime_como_me_has_conocido = document.getElementById("dime_como_me_has_conocido");    
     if (dime_como_me_has_conocido != null) {
         if (dime_como_me_has_conocido.checkValidity() == false) {
-            alert("Por favor indica cómo me has conocido");
+            document.getElementById('texto_capa_error').innerText = "Por favor indica cómo me has conocido";
+            añadecapa('capa_error', 'error');
+            borracapa('capa_error', 'success');            
             dime_como_me_has_conocido.focus();
             evt.preventDefault();
             return false;
@@ -74,7 +93,9 @@ form.addEventListener("submit", function(evt){
     // Validar número de teléfono (9 dígitos)
     var telefono = document.getElementById("telefono");
     if (telefono.checkValidity() == false) {
-        alert("Formato de teléfono no válido");
+        document.getElementById('texto_capa_error').innerText = "Formato de teléfono no válido";
+        añadecapa('capa_error', 'error');
+        borracapa('capa_error', 'success');        
         telefono.focus();
         evt.preventDefault();
         return false;
@@ -83,13 +104,17 @@ form.addEventListener("submit", function(evt){
     var palabras_restantes = document.getElementById('palabras_restantes').innerHTML;
     if (parseInt(palabras_restantes) < 0)
     {
-        alert("Número de palabras excedido");
+        document.getElementById('texto_capa_error').innerText = "Número de palabras excedido";
+        añadecapa('capa_error', 'error');
+        borracapa('capa_error', 'success');        
         evt.preventDefault();
         return false;  
     }
     
     // Advertimos de éxito en el envío del formulario, simulando su envio.
-    alert('Formulario enviado con éxito');
+    document.getElementById('texto_capa_error').innerText = "Formulario enviado con éxito";
+    añadecapa('capa_error', 'success');
+    borracapa('capa_error', 'error');    
     evt.preventDefault();
     return false;    
 });

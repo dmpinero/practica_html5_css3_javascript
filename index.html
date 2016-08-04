@@ -1,4 +1,4 @@
-<!--DOCTYPE html-->
+<!DOCTYPE html>
 <html lang="es" >
     <head>
         <title>CV Daniel Martínez Piñero</title>
@@ -397,11 +397,16 @@
         
         <!-- Contacto -->
         <section class="contact-form" id="contacto">
-            <form id="formulario-contacto" name="formulario-contacto" method="post" novalidate>
+            <form id="formulario-contacto" name="formulario-contacto" method="post" novalidate>            
                 <div class="row">
                    <!-- Cabecera de la sección -->
                    <h2>Contacto</h2>
                 </div>
+                <!-- Capa para mostrar mensajes de error-->
+                <div class="row alert-message error" id="capa_error">
+                  <div class="box-icon"></div>
+                  <p><span id="texto_capa_error">This is an alert box</span><a href="#" class="close">&times;</a></p>
+                </div>                
                <!-- Campo nombre. Requerido-->
                 <div class="row">
                     <div class="col span-1-of-3">
