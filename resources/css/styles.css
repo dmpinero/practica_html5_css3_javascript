@@ -100,6 +100,7 @@ input[type=submit] {
     border-radius: 200px; /* Botones redondeados */
     color: #fff; /* Color de la fuente */
     transition: background-color 0.2s, border 0.2s, color 0.2s; /* Tiempo que tarda en cambiar de color cuando pasa el ratón */
+    cursor: pointer;
 }
 
 .btn-full:link,
@@ -204,8 +205,7 @@ input[type=submit]:active {
 }
 
 .main-nav li a:link,
-.main-nav li a:visited
-{
+.main-nav li a:visited {
     padding: 8px 0;
     color: #fff;
     text-decoration: none;
@@ -218,6 +218,10 @@ input[type=submit]:active {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
     color: #e67e22;
+}
+
+.sticky_id {
+    background-color: #f3efe0;
 }
 
 .sticky {
